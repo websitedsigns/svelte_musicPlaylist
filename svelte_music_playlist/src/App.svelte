@@ -2,6 +2,54 @@
 
   import PlaylistItem from './lib/PlaylistItem.svelte';
 
+
+
+  const tracks = [
+
+    {
+
+      id: 1,
+
+      title: 'Track title',
+
+      artist: 'Artist Name',
+
+      album: 'Album Name',
+
+      length: '4:23',
+
+    },
+
+    {
+
+      id: 2,
+
+      title: 'Track title',
+
+      artist: 'Artist Name',
+
+      album: 'Album Name',
+
+      length: '4:23',
+
+    },
+
+    {
+
+      id: 3,
+
+      title: 'Track title',
+
+      artist: 'Artist Name',
+
+      album: 'Album Name',
+
+      length: '4:23',
+
+    },
+
+  ] as Track[];
+
 </script>
 
 
@@ -18,11 +66,11 @@
 
     <ol class="border-4 border-pink-600">
 
-      <PlaylistItem/>
+      {#each tracks as track}
 
-      <PlaylistItem/>
+        <PlaylistItem track={track}/>
 
-      <PlaylistItem/>
+      {/each}
 
     </ol>
 

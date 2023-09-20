@@ -4,6 +4,10 @@
 
   import { mdiMusic, mdiPlay, mdiPause } from '@mdi/js';
 
+
+
+  export let track: Track;
+
 </script>
 
 
@@ -20,13 +24,13 @@
 
     <div class="flex flex-row">
 
-      <h2 class="flex-1 font-bold">Track title</h2>
+      <h2 class="flex-1 font-bold">{track.title}</h2>
 
-      <p class="text-neutral-200">04:23</p>
+      <p class="text-neutral-200">{track.length}</p>
 
     </div>
 
-    <p>Artist Name - Album Name</p>
+    <p>{track.artist} - {track.album}</p>
 
   </div>
 

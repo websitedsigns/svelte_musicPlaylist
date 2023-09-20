@@ -1,13 +1,9 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 
-
 svg[class*='svelte-'] {
-
   @apply w-full h-full;
 
 }

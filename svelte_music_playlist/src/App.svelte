@@ -50,6 +50,8 @@
 
   ] as Track[];
 
+  let currentTrack = -1;
+
 </script>
 
 
@@ -68,7 +70,7 @@
 
       {#each tracks as track}
 
-        <PlaylistItem track={track}/>
+        <PlaylistItem track={track} state={track.id === currentTrack ? 'playing' : 'paused'}/>
 
       {/each}
 
